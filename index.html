@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mohamed Ahshaan | AI & Data Science Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Portfolio of Mohamed Ahshaan – AI & Data Science undergraduate, Machine Learning enthusiast, and ICT instructor." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --blue: #2563eb;
+      --blue-soft: #eff3ff;
+      --bg: #f5f7fb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+      --radius: 18px;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* LAYOUT */
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar {
+      width: 260px;
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 1.5rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 999px;
+      margin: 0 auto 0.7rem;
+      border: 3px solid #1d4ed8;
+      overflow: hidden;
+      background: #1f2937;
+    }
+
+    .profile-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .profile-role {
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      margin-top: 0.4rem;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #d1d5db;
+      cursor: pointer;
+    }
+
+    .nav-link i {
+      width: 16px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+      background: #1e293b;
+      color: #ffffff;
+    }
+
+    .sidebar-bottom {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      font-size: 0.85rem;
+    }
+
+    .btn-cv {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--blue);
+      color: #ffffff;
+      font-size: 0.84rem;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.5);
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      justify-content: center;
+    }
+
+    .social-row a {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    .social-row a:hover {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+      color: #ffffff;
+    }
+
+    .sidebar-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    /* MAIN CONTENT */
+
+    .main {
+      flex: 1;
+      padding: 1.8rem 2rem 2.5rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1.7rem 2rem;
+      margin-bottom: 1.6rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* HOME / HERO */
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .hero-hi {
+      font-size: 0.9rem;
+      color: var(--blue);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      margin: 0 0 0.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title span {
+      color: var(--blue);
+    }
+
+    .hero-tagline {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-tag {
+      font-size: 0.78rem;
+      padding: 0.18rem 0.7rem;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: #1e3a8a;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.48rem 1rem;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 14px 32px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-ghost {
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-muted);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo-circle {
+      width: 230px;
+      height: 230px;
+      border-radius: 999px;
+      background: linear-gradient(145deg, #1d4ed8, #06b6d4);
+      padding: 4px;
+      position: relative;
+    }
+
+    .hero-photo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #ffffff;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-photo-inner img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.6fr) minmax(0, 2fr);
+      gap: 1.8rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .about-highlights {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .about-item-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .about-item-title i {
+      color: var(--blue);
+      font-size: 0.85rem;
+    }
+
+    /* SKILLS SECTION */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      font-size: 0.86rem;
+    }
+
+    .skills-card-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .skill-tag {
+      font-size: 0.78rem;
+      padding: 0.16rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #f9fafb;
+      color: var(--text-muted);
+    }
+
+    /* RESUME (EDU + EXP) */
+
+    .resume-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .resume-col-title {
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .resume-item {
+      border-left: 2px solid var(--blue-soft);
+      padding-left: 0.8rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .resume-item::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 0.35rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+
+    .resume-role {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .resume-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio-filter {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.1rem;
+      font-size: 0.8rem;
+    }
+
+    .portfolio-filter button {
+      padding: 0.22rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .portfolio-filter button.active {
+      background: var(--blue);
+      color: #ffffff;
+      border-color: var(--blue);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      font-size: 0.86rem;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-img {
+      height: 140px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-body {
+      padding: 0.8rem 0.9rem 0.9rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-meta {
+      font-size: 0.78rem;
+      color: var(--blue);
+      margin-bottom: 0.35rem;
+    }
+
+    .project-links {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-links a {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .contact-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-text small {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+
+    .contact-text span {
+      font-size: 0.88rem;
+    }
+
+    .contact-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
+    }
+
+    .qr-box {
+      border-radius: 16px;
+      border: 1px dashed var(--border);
+      padding: 0.9rem;
+      text-align: center;
+      background: #f9fafb;
+    }
+
+    .qr-box img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 0.5rem;
+      border-radius: 12px;
+    }
+
+    .qr-box p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .qr-box p span {
+      display: block;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 960px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1.1rem;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-align: left;
+      }
+
+      .profile-avatar {
+        width: 50px;
+        height: 50px;
+        margin: 0;
+      }
+
+      .profile-name {
+        font-size: 0.95rem;
+      }
+
+      .profile-role {
+        font-size: 0.75rem;
+      }
+
+      .sidebar-nav {
+        display: none; /* keep top bar simple on mobile */
+      }
+
+      .sidebar-bottom {
+        margin-top: 0;
+        align-items: flex-end;
+      }
+
+      .social-row {
+        display: none;
+      }
+
+      .sidebar-note {
+        display: none;
+      }
+
+      .main {
+        padding: 1.2rem 1.1rem 2.2rem;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .resume-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-photo-circle {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .section {
+        padding: 1.3rem 1.2rem;
+      }
+
+      .hero-title {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="profile-avatar">
+        <!-- Replace profile.jpg with your real photo -->
+        <img src="profile.jpg" alt="Profile photo of Mohamed Ahshaan" />
+      </div>
+      <div>
+        <div class="profile-name">Mohamed Ahshaan</div>
+        <div class="profile-role">AI & DS Undergraduate · ML Enthusiast</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> About</a>
+      <a href="#resume" class="nav-link"><i class="fa-regular fa-file-lines"></i> Resume</a>
+      <a href="#portfolio" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Portfolio</a>
+      <a href="#contact" class="nav-link"><i class="fa-regular fa-envelope"></i> Contact</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="Mohamed_Ahshaan_CV.pdf" class="btn-cv" download>
+        <i class="fa-solid fa-file-arrow-down"></i>
+        Download CV
+      </a>
+
+      <div class="social-row">
+        <a href="https://www.linkedin.com/search/results/all/?keywords=Mohamed%20Ahshaan" target="_blank">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Mohamedahshaan" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.youtube.com/results?search_query=ICT+with+Ahshaan" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/search/top?q=Mohamed%20Ahshaan" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/ah_shaan.22" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.google.com/search?q=Ahshaan" target="_blank">
+          <i class="fa-brands fa-google"></i>
+        </a>
+      </div>
+
+      <div class="sidebar-note">
+        Open to remote internships, part-time roles & collaborations in AI, ML & Data Science.
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HOME / HERO -->
+    <section id="home" class="section">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-hi">Hi there!</div>
+          <h1 class="hero-title">
+            I'm <span>Mohamed Ahshaan</span>
+          </h1>
+          <p class="hero-tagline">
+            Second-year BSc (Hons) Artificial Intelligence & Data Science undergraduate at
+            Informatics Institute of Technology (IIT), affiliated with Robert Gordon University, UK.
+            I enjoy building intelligent, data-driven solutions using Machine Learning, Deep Learning and NLP.
+          </p>
+
+          <div class="hero-tags">
+            <span class="hero-tag">AI & ML</span>
+            <span class="hero-tag">Data Science</span>
+            <span class="hero-tag">NLP</span>
+            <span class="hero-tag">Python</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn-primary">
+              <i class="fa-solid fa-diagram-project"></i> View Projects
+            </a>
+            <a href="#contact" class="btn-ghost">
+              <i class="fa-regular fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span><i class="fa-solid fa-location-dot"></i> Colombo, Sri Lanka</span>
+            <span><i class="fa-solid fa-laptop-code"></i> AI & DS @ IIT (RGU)</span>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-circle">
+            <div class="hero-photo-inner">
+              <!-- Replace profile.jpg with your real photo (same as sidebar or another) -->
+              <img src="profile.jpg" alt="Portrait of Mohamed Ahshaan" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section-heading">
+        <div>
+          <div class="section-title">About Me</div>
+          <div class="section-subtitle">AI & Data Science + ICT Education</div>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <p>
+            I'm a second-year <strong>Artificial Intelligence & Data Science</strong>
+            undergraduate who loves working at the intersection of AI, statistics and real-world
+            problem solving. I completed my foundation programme in 2024 and started my degree in 2025.
+          </p>
+          <p>
+            I am passionate about <strong>Machine Learning, Deep Learning, NLP and Data Analytics</strong>.
+            I enjoy transforming raw data into useful insights and building models that support
+            decision-making. I mostly code in <strong>Python</strong> and use tools like
+            <strong>Pandas, Scikit-learn, NumPy, Jupyter, SQL</strong> and visualization libraries.
+          </p>
+          <p>
+            Alongside my degree, I run <strong>“ICT With Ahshaan”</strong>, where I teach GCE O/L
+            ICT (Tamil medium) via online and physical classes, create unit-wise notes, tutorials,
+            and MCQs to help students aim for an A grade.
+          </p>
+        </div>
+
+        <div class="about-highlights">
+          <div>
+            <div class="about-item-title">
+              <i class="fa-solid fa-bullseye"></i> What I'm looking for
+            </div>
+            <p>
+              Remote internships, part-time roles or collaborations in AI, ML, data analytics
+              and ed-tech projects where I can learn, contribute and grow.
+            </p>
+          </div>
+          <div>
+            <div class="about-item-title">
+              <i class="fa-solid fa-lightbulb"></i> Strengths
+            </div>
+            <p>
+              Fast learner, motivated problem-solver, comfortable with the full ML workflow:
+              data cleaning → feature engineering → model training → evaluation.
+            </p>
+          </div>
+          <div>
+            <div class="about-item-title">
+              <i class="fa-solid fa-users"></i> Teaching & Mentoring
+            </div>
+            <p>
+              2+ years of experience helping O/L ICT students through structured lessons, practice
+              questions, and continuous motivation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <div class="section-title">Skills</div>
+          <div class="section-subtitle">What I work with</div>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div>
+          <div class="skills-card-title">AI, ML & Data Science</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Machine Learning Algorithms</span>
+            <span class="skill-tag">Deep Learning Basics</span>
+            <span class="skill-tag">NLP (Preprocessing, Sentiment)</span>
+            <span class="skill-tag">EDA & Data Cleaning</span>
+            <span class="skill-tag">Model Evaluation (ROC, F1)</span>
+            <span class="skill-tag">Statistics & Probability</span>
+          </div>
+        </div>
+        <div>
+          <div class="skills-card-title">Programming</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">R (Basics)</span>
+          </div>
+        </div>
+        <div>
+          <div class="skills-card-title">Libraries & Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Matplotlib</span>
+            <span class="skill-tag">Anaconda</span>
+            <span class="skill-tag">Jupyter / Google Colab</span>
+            <span class="skill-tag">Git & GitHub</span>
+          </div>
+        </div>
+        <div>
+          <div class="skills-card-title">Data & ICT</div>
+          <div class="skill-tags">
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Excel / CSV</span>
+            <span class="skill-tag">ICT Curriculum Design</span>
+            <span class="skill-tag">Tamil-medium ICT Teaching</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="section">
+      <div class="section-heading">
+        <div>
+          <div class="section-title">Resume</div>
+          <div class="section-subtitle">Education & experience</div>
+        </div>
+      </div>
+
+      <div class="resume-grid">
+        <div>
+          <div class="resume-col-title">Education</div>
+
+          <div class="resume-item">
+            <div class="resume-role">BSc (Hons) Artificial Intelligence & Data Science</div>
+            <div class="resume-meta">
+              Informatics Institute of Technology (IIT), Sri Lanka · Affiliated with Robert Gordon University, UK · 2025 – Present
+            </div>
+            <div>
+              Coursework and projects in machine learning, data analytics, statistics and programming.
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="resume-role">Foundation Programme in IT / Computing</div>
+            <div class="resume-meta">
+              Informatics Institute of Technology (IIT) · Completed 2024
+            </div>
+            <div>
+              Built a strong foundation in mathematics, programming and ICT, which led to choosing
+              the AI & DS pathway.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="resume-col-title">Experience</div>
+
+          <div class="resume-item">
+            <div class="resume-role">ICT Instructor — ICT With Ahshaan</div>
+            <div class="resume-meta">Online & Physical · 2023 – Present · Sri Lanka</div>
+            <div>
+              Teaching GCE O/L ICT (Tamil medium) for Grade 10 & 11 students, preparing
+              structured notes, tutorials, and MCQ banks, and conducting live Zoom and in-person classes.
+            </div>
+          </div>
+
+          <!-- Add future internships here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section">
+      <div class="section-heading">
+        <div>
+          <div class="section-title">Portfolio</div>
+          <div class="section-subtitle">Some of the work I've done</div>
+        </div>
+      </div>
+
+      <div class="portfolio-filter">
+        <button class="active" type="button">All</button>
+        <button type="button">AI / ML</button>
+        <button type="button">Data & Analytics</button>
+        <button type="button">ICT & Teaching</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-img">
+            <!-- Replace with real screenshot -->
+            <img src="project1.jpg" alt="ICT With Ahshaan Website" />
+          </div>
+          <div class="project-body">
+            <div class="project-title">ICT With Ahshaan — Digital Learning Platform</div>
+            <div class="project-meta">ICT · Web · Education</div>
+            <p>
+              A learning platform for GCE O/L ICT students (Tamil medium) providing unit-wise notes,
+              tutorials, MCQs and class information.
+            </p>
+            <div class="project-links">
+              <a href="https://ictwithahshaan.github.io" target="_blank">
+                <i class="fa-solid fa-globe"></i> View Site
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-img">
+            <!-- Replace with real screenshot -->
+            <img src="project2.jpg" alt="One Net Café Inventory System" />
+          </div>
+          <div class="project-body">
+            <div class="project-title">One Net Café — Python Inventory System</div>
+            <div class="project-meta">Python · CLI · Inventory</div>
+            <p>
+              A command-line inventory management system for a café, with item, dealer and order
+              handling using file-based storage.
+            </p>
+            <div class="project-links">
+              <a href="#">
+                <i class="fa-brands fa-github"></i> GitHub (coming soon)
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-img">
+            <!-- Replace with real screenshot -->
+            <img src="project3.jpg" alt="Dementia Risk Classification" />
+          </div>
+          <div class="project-body">
+            <div class="project-title">Dementia Risk Classification</div>
+            <div class="project-meta">ML · Health · Classification</div>
+            <p>
+              Built and compared multiple ML models (Random Forest, XGBoost, Gradient Boosting,
+              Logistic Regression) to classify dementia risk using non-medical factors.
+            </p>
+            <div class="project-links">
+              <a href="#">
+                <i class="fa-solid fa-file-lines"></i> Notebook (coming soon)
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section-heading">
+        <div>
+          <div class="section-title">Contact</div>
+          <div class="section-subtitle">Let’s connect</div>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <small>Email</small>
+                <span><a href="mailto:mohamedahshaan@gmail.com">mohamedahshaan@gmail.com</a></span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-text">
+                <small>Phone</small>
+                <span>+94 74 266 3484</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div class="contact-text">
+                <small>Website</small>
+                <span><a href="https://ictwithahshaan.github.io" target="_blank">ictwithahshaan.github.io</a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-note">
+            I’m especially interested in roles and projects related to AI, Machine Learning,
+            Data Analytics, and education technology. Feel free to reach out if you think we can
+            work together.
+          </div>
+        </div>
+
+        <div>
+          <div class="qr-box">
+            <!-- Simple QR to your website (online API) -->
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ictwithahshaan.github.io"
+              alt="QR code to ictwithahshaan.github.io" />
+            <p>
+              Scan to visit
+              <span>ictwithahshaan.github.io</span>
+              and view more about my ICT classes and learning content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // Highlight active nav link on scroll (desktop)
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  function onScroll() {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 120;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", onScroll);
+</script>
+
+</body>
+</html>
