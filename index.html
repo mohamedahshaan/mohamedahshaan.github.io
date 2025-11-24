@@ -78,8 +78,8 @@
     }
 
     .profile-avatar {
-      width: 90px;
-      height: 90px;
+      width: 120px;
+      height: 120px;
       border-radius: 999px;
       margin: 0 auto 0.7rem;
       border: 3px solid #1d4ed8;
@@ -88,13 +88,15 @@
     }
 
     .profile-name {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 600;
+      margin-bottom: 0.3rem;
     }
 
     .profile-role {
       font-size: 0.82rem;
       color: #9ca3af;
+      line-height: 1.4;
     }
 
     .sidebar-nav {
@@ -113,6 +115,7 @@
       font-size: 0.85rem;
       color: #d1d5db;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     .nav-link i {
@@ -125,6 +128,7 @@
     .nav-link:hover {
       background: #1e293b;
       color: #ffffff;
+      transform: translateX(5px);
     }
 
     .sidebar-bottom {
@@ -140,14 +144,23 @@
       align-items: center;
       justify-content: center;
       gap: 0.4rem;
-      padding: 0.45rem 0.9rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 999px;
       border: none;
       background: var(--blue);
       color: #ffffff;
-      font-size: 0.84rem;
+      font-size: 0.85rem;
+      font-weight: 500;
       cursor: pointer;
       box-shadow: 0 14px 30px rgba(37, 99, 235, 0.5);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn-cv:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 18px 35px rgba(37, 99, 235, 0.6);
     }
 
     .social-row {
@@ -158,27 +171,33 @@
     }
 
     .social-row a {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       border-radius: 999px;
       border: 1px solid #374151;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: #9ca3af;
+      transition: all 0.3s ease;
     }
 
     .social-row a:hover {
       background: #1d4ed8;
       border-color: #1d4ed8;
       color: #ffffff;
+      transform: translateY(-2px);
     }
 
     .sidebar-note {
       text-align: center;
       font-size: 0.75rem;
       color: #9ca3af;
+      line-height: 1.4;
+      padding: 0.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
     }
 
     /* MAIN CONTENT */
@@ -235,9 +254,10 @@
     }
 
     .hero-title {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin: 0 0 0.4rem;
       letter-spacing: -0.02em;
+      line-height: 1.2;
     }
 
     .hero-title span {
@@ -249,6 +269,7 @@
       color: var(--text-muted);
       max-width: 520px;
       margin-bottom: 1rem;
+      line-height: 1.6;
     }
 
     .hero-tags {
@@ -264,6 +285,7 @@
       border-radius: 999px;
       background: var(--blue-soft);
       color: #1e3a8a;
+      font-weight: 500;
     }
 
     .hero-actions {
@@ -277,10 +299,12 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.48rem 1rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 999px;
       font-size: 0.86rem;
       cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
     }
 
     .btn-primary {
@@ -290,10 +314,22 @@
       box-shadow: 0 14px 32px rgba(37, 99, 235, 0.45);
     }
 
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 18px 35px rgba(37, 99, 235, 0.6);
+    }
+
     .btn-ghost {
       border: 1px solid var(--border);
       background: #ffffff;
       color: var(--text-muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      transform: translateY(-2px);
     }
 
     .hero-meta {
@@ -317,12 +353,13 @@
     }
 
     .hero-photo-circle {
-      width: 230px;
-      height: 230px;
+      width: 260px;
+      height: 260px;
       border-radius: 999px;
       background: linear-gradient(145deg, #1d4ed8, #06b6d4);
-      padding: 4px;
+      padding: 5px;
       position: relative;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
     }
 
     .hero-photo-inner {
@@ -338,6 +375,7 @@
 
     .hero-photo-inner img {
       height: 100%;
+      width: 100%;
       object-fit: cover;
     }
 
@@ -382,6 +420,7 @@
     .skills-card-title {
       font-weight: 600;
       margin-bottom: 0.3rem;
+      color: var(--text-main);
     }
 
     .skill-tags {
@@ -397,6 +436,13 @@
       border: 1px solid var(--border);
       background: #f9fafb;
       color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--blue-soft);
+      color: var(--blue);
+      transform: translateY(-1px);
     }
 
     /* RESUME (EDU + EXP) */
@@ -411,6 +457,8 @@
     .resume-col-title {
       font-weight: 600;
       margin-bottom: 0.6rem;
+      color: var(--text-main);
+      font-size: 1rem;
     }
 
     .resume-item {
@@ -434,6 +482,7 @@
     .resume-role {
       font-weight: 600;
       font-size: 0.9rem;
+      color: var(--text-main);
     }
 
     .resume-meta {
@@ -459,9 +508,11 @@
       background: #ffffff;
       color: var(--text-muted);
       cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .portfolio-filter button.active {
+    .portfolio-filter button.active,
+    .portfolio-filter button:hover {
       background: var(--blue);
       color: #ffffff;
       border-color: var(--blue);
@@ -470,7 +521,7 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1rem;
+      gap: 1.5rem;
       font-size: 0.86rem;
     }
 
@@ -481,10 +532,16 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
     }
 
     .project-img {
-      height: 140px;
+      height: 160px;
       background: #e5e7eb;
       overflow: hidden;
     }
@@ -493,25 +550,42 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-img img {
+      transform: scale(1.05);
     }
 
     .project-body {
-      padding: 0.8rem 0.9rem 0.9rem;
+      padding: 1rem 1.2rem 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .project-title {
       font-weight: 600;
       margin-bottom: 0.25rem;
+      color: var(--text-main);
     }
 
     .project-meta {
       font-size: 0.78rem;
       color: var(--blue);
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .project-description {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
+      flex-grow: 1;
     }
 
     .project-links {
-      margin-top: 0.5rem;
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -526,6 +600,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+
+    .project-links a:hover {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
     }
 
     /* CONTACT */
@@ -573,6 +654,7 @@
       font-size: 0.82rem;
       color: var(--text-muted);
       margin-top: 0.8rem;
+      line-height: 1.5;
     }
 
     .qr-box {
@@ -593,6 +675,7 @@
     .qr-box p {
       font-size: 0.8rem;
       color: var(--text-muted);
+      line-height: 1.4;
     }
 
     .qr-box p span {
@@ -626,13 +709,13 @@
       }
 
       .profile-avatar {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         margin: 0;
       }
 
       .profile-name {
-        font-size: 0.95rem;
+        font-size: 1rem;
       }
 
       .profile-role {
@@ -668,8 +751,8 @@
       }
 
       .hero-photo-circle {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
         margin: 0 auto;
       }
     }
@@ -681,6 +764,10 @@
 
       .hero-title {
         font-size: 1.7rem;
+      }
+      
+      .resume-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -694,12 +781,12 @@
   <aside class="sidebar">
     <div class="profile">
       <div class="profile-avatar">
-        <!-- Replace profile.jpg with your real photo -->
+        <!-- Replace with your actual profile.jpg -->
         <img src="profile.jpg" alt="Profile photo of Mohamed Ahshaan" />
       </div>
       <div>
         <div class="profile-name">Mohamed Ahshaan</div>
-        <div class="profile-role">AI & DS Undergraduate · ML Enthusiast</div>
+        <div class="profile-role">AI & Data Science Undergraduate<br>Machine Learning Enthusiast</div>
       </div>
     </div>
 
@@ -751,14 +838,14 @@
     <section id="home" class="section">
       <div class="hero-grid">
         <div>
-          <div class="hero-hi">Hi there!</div>
+          <div class="hero-hi">Hi there! I'm</div>
           <h1 class="hero-title">
-            I'm <span>Mohamed Ahshaan</span>
+            Mohamed <span>Ahshaan</span>
           </h1>
           <p class="hero-tagline">
             Second-year BSc (Hons) Artificial Intelligence & Data Science undergraduate at
             Informatics Institute of Technology (IIT), affiliated with Robert Gordon University, UK.
-            I enjoy building intelligent, data-driven solutions using Machine Learning, Deep Learning and NLP.
+            Passionate about building intelligent, data-driven solutions using Machine Learning, Deep Learning and NLP.
           </p>
 
           <div class="hero-tags">
@@ -766,6 +853,7 @@
             <span class="hero-tag">Data Science</span>
             <span class="hero-tag">NLP</span>
             <span class="hero-tag">Python</span>
+            <span class="hero-tag">ICT Education</span>
           </div>
 
           <div class="hero-actions">
@@ -784,12 +872,7 @@
         </div>
 
         <div class="hero-photo-wrap">
-          <div class="hero-photo-circle">
-            <div class="hero-photo-inner">
-              <!-- Replace profile.jpg with your real photo (same as sidebar or another) -->
-              <img src="profile.jpg" alt="Portrait of Mohamed Ahshaan" />
-            </div>
-          </div>
+          <!-- Removed duplicate profile picture in hero section -->
         </div>
       </div>
     </section>
@@ -807,39 +890,39 @@
         <div>
           <p>
             I'm a second-year <strong>Artificial Intelligence & Data Science</strong>
-            undergraduate who loves working at the intersection of AI, statistics and real-world
-            problem solving. I completed my foundation programme in 2024 and started my degree in 2025.
+            undergraduate passionate about working at the intersection of AI, statistics and real-world
+            problem solving. I completed my foundation programme in 2024 with a Distinction Pass and started my degree in 2024.
           </p>
           <p>
-            I am passionate about <strong>Machine Learning, Deep Learning, NLP and Data Analytics</strong>.
-            I enjoy transforming raw data into useful insights and building models that support
-            decision-making. I mostly code in <strong>Python</strong> and use tools like
+            I specialize in <strong>Machine Learning, Deep Learning, NLP and Data Analytics</strong>.
+            I enjoy transforming raw data into actionable insights and building models that support
+            decision-making. I primarily code in <strong>Python</strong> and utilize tools like
             <strong>Pandas, Scikit-learn, NumPy, Jupyter, SQL</strong> and visualization libraries.
           </p>
           <p>
-            Alongside my degree, I run <strong>“ICT With Ahshaan”</strong>, where I teach GCE O/L
-            ICT (Tamil medium) via online and physical classes, create unit-wise notes, tutorials,
-            and MCQs to help students aim for an A grade.
+            Alongside my degree, I run <strong>"ICT With Ahshaan"</strong>, where I teach GCE O/L
+            ICT (Tamil medium) via online and physical classes, creating comprehensive notes, tutorials,
+            and MCQ banks to help students achieve academic excellence.
           </p>
         </div>
 
         <div class="about-highlights">
           <div>
             <div class="about-item-title">
-              <i class="fa-solid fa-bullseye"></i> What I'm looking for
+              <i class="fa-solid fa-bullseye"></i> Career Objectives
             </div>
             <p>
-              Remote internships, part-time roles or collaborations in AI, ML, data analytics
-              and ed-tech projects where I can learn, contribute and grow.
+              Seeking remote internships, part-time roles or collaborations in AI, ML, data analytics
+              and ed-tech projects where I can apply my skills, learn from industry professionals, and contribute to innovative solutions.
             </p>
           </div>
           <div>
             <div class="about-item-title">
-              <i class="fa-solid fa-lightbulb"></i> Strengths
+              <i class="fa-solid fa-lightbulb"></i> Core Strengths
             </div>
             <p>
-              Fast learner, motivated problem-solver, comfortable with the full ML workflow:
-              data cleaning → feature engineering → model training → evaluation.
+              Fast learner, analytical problem-solver, and proficient in the complete ML workflow:
+              data collection → cleaning → feature engineering → model training → evaluation → deployment.
             </p>
           </div>
           <div>
@@ -847,8 +930,7 @@
               <i class="fa-solid fa-users"></i> Teaching & Mentoring
             </div>
             <p>
-              2+ years of experience helping O/L ICT students through structured lessons, practice
-              questions, and continuous motivation.
+              2+ years of experience in educational content creation and student mentoring, helping O/L ICT students through structured lessons, practice questions, and continuous motivation.
             </p>
           </div>
         </div>
@@ -859,8 +941,8 @@
     <section class="section">
       <div class="section-heading">
         <div>
-          <div class="section-title">Skills</div>
-          <div class="section-subtitle">What I work with</div>
+          <div class="section-title">Technical Skills</div>
+          <div class="section-subtitle">Technologies & tools I work with</div>
         </div>
       </div>
 
@@ -868,42 +950,50 @@
         <div>
           <div class="skills-card-title">AI, ML & Data Science</div>
           <div class="skill-tags">
-            <span class="skill-tag">Machine Learning Algorithms</span>
-            <span class="skill-tag">Deep Learning Basics</span>
-            <span class="skill-tag">NLP (Preprocessing, Sentiment)</span>
-            <span class="skill-tag">EDA & Data Cleaning</span>
-            <span class="skill-tag">Model Evaluation (ROC, F1)</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Natural Language Processing</span>
+            <span class="skill-tag">Exploratory Data Analysis</span>
+            <span class="skill-tag">Data Cleaning & Preprocessing</span>
+            <span class="skill-tag">Model Evaluation</span>
             <span class="skill-tag">Statistics & Probability</span>
+            <span class="skill-tag">Data Visualization</span>
           </div>
         </div>
         <div>
-          <div class="skills-card-title">Programming</div>
+          <div class="skills-card-title">Programming Languages</div>
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">JavaScript</span>
             <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
             <span class="skill-tag">R (Basics)</span>
+            <span class="skill-tag">SQL</span>
           </div>
         </div>
         <div>
-          <div class="skills-card-title">Libraries & Tools</div>
+          <div class="skills-card-title">Libraries & Frameworks</div>
           <div class="skill-tags">
             <span class="skill-tag">NumPy</span>
             <span class="skill-tag">Pandas</span>
             <span class="skill-tag">Scikit-learn</span>
             <span class="skill-tag">Matplotlib</span>
-            <span class="skill-tag">Anaconda</span>
-            <span class="skill-tag">Jupyter / Google Colab</span>
-            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Seaborn</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">NLTK</span>
+            <span class="skill-tag">Jupyter</span>
           </div>
         </div>
         <div>
-          <div class="skills-card-title">Data & ICT</div>
+          <div class="skills-card-title">Tools & Platforms</div>
           <div class="skill-tags">
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Excel / CSV</span>
-            <span class="skill-tag">ICT Curriculum Design</span>
-            <span class="skill-tag">Tamil-medium ICT Teaching</span>
+            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">Google Colab</span>
+            <span class="skill-tag">Anaconda</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Microsoft Excel</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">MySQL</span>
           </div>
         </div>
       </div>
@@ -914,7 +1004,7 @@
       <div class="section-heading">
         <div>
           <div class="section-title">Resume</div>
-          <div class="section-subtitle">Education & experience</div>
+          <div class="section-subtitle">Education & Professional Experience</div>
         </div>
       </div>
 
@@ -923,23 +1013,42 @@
           <div class="resume-col-title">Education</div>
 
           <div class="resume-item">
-            <div class="resume-role">BSc (Hons) Artificial Intelligence & Data Science</div>
+            <div class="resume-role">BSc (Hons) Artificial Intelligence and Data Science</div>
             <div class="resume-meta">
-              Informatics Institute of Technology (IIT), Sri Lanka · Affiliated with Robert Gordon University, UK · 2025 – Present
+              Informatics Institute of Technology (IIT), Colombo · Affiliated with Robert Gordon University (RGU), UK · 2024 – Present
             </div>
             <div>
-              Coursework and projects in machine learning, data analytics, statistics and programming.
+              Currently pursuing specialized coursework in machine learning, data analytics, statistics, and programming. Focused on practical applications of AI and data science principles.
             </div>
           </div>
 
           <div class="resume-item">
-            <div class="resume-role">Foundation Programme in IT / Computing</div>
+            <div class="resume-role">IIT Foundation Programme (Computing / IT)</div>
             <div class="resume-meta">
-              Informatics Institute of Technology (IIT) · Completed 2024
+              Informatics Institute of Technology (IIT), Colombo · Completed 2024 · Distinction Pass
             </div>
             <div>
-              Built a strong foundation in mathematics, programming and ICT, which led to choosing
-              the AI & DS pathway.
+              Built a strong foundation in mathematics, programming and ICT fundamentals, which led to choosing the AI & Data Science pathway for my degree.
+            </div>
+          </div>
+          
+          <div class="resume-item">
+            <div class="resume-role">G.C.E. Advanced Level - Arts Stream</div>
+            <div class="resume-meta">
+              Al-Ashraq National School, Nintavur · 2023 (2024)
+            </div>
+            <div>
+              Completed Advanced Level education with focus on arts subjects, developing strong analytical and communication skills.
+            </div>
+          </div>
+          
+          <div class="resume-item">
+            <div class="resume-role">G.C.E. Ordinary Level</div>
+            <div class="resume-meta">
+              Al-Ashraq National School, Nintavur · 2020 (2021)
+            </div>
+            <div>
+              Completed foundational secondary education with strong academic performance across all subjects.
             </div>
           </div>
         </div>
@@ -948,15 +1057,34 @@
           <div class="resume-col-title">Experience</div>
 
           <div class="resume-item">
-            <div class="resume-role">ICT Instructor — ICT With Ahshaan</div>
+            <div class="resume-role">ICT Instructor & Content Creator — ICT With Ahshaan</div>
             <div class="resume-meta">Online & Physical · 2023 – Present · Sri Lanka</div>
             <div>
-              Teaching GCE O/L ICT (Tamil medium) for Grade 10 & 11 students, preparing
-              structured notes, tutorials, and MCQ banks, and conducting live Zoom and in-person classes.
+              Teaching GCE O/L ICT (Tamil medium) for Grade 10 & 11 students through structured curriculum, 
+              creating comprehensive study materials, tutorials, and MCQ banks. Conducting both online (Zoom) 
+              and in-person classes to help students achieve academic excellence.
             </div>
           </div>
 
-          <!-- Add future internships here -->
+          <div class="resume-item">
+            <div class="resume-role">Freelance Tutor & Educational Consultant</div>
+            <div class="resume-meta">Self-Employed · 2022 – Present · Sri Lanka</div>
+            <div>
+              Developed and delivered customized learning materials, practice questions, and video tutorials
+              for ICT students. Provided one-on-one tutoring and academic guidance to help students improve
+              their understanding and performance in ICT subjects.
+            </div>
+          </div>
+          
+          <div class="resume-item">
+            <div class="resume-role">AI & ML Project Developer</div>
+            <div class="resume-meta">Personal Projects · 2024 – Present</div>
+            <div>
+              Working on various AI and machine learning projects including classification models, 
+              data analysis, and NLP applications. Building practical experience through hands-on 
+              implementation of data science concepts learned during academic studies.
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -966,34 +1094,37 @@
       <div class="section-heading">
         <div>
           <div class="section-title">Portfolio</div>
-          <div class="section-subtitle">Some of the work I've done</div>
+          <div class="section-subtitle">Selected projects showcasing my skills</div>
         </div>
       </div>
 
       <div class="portfolio-filter">
         <button class="active" type="button">All</button>
         <button type="button">AI / ML</button>
-        <button type="button">Data & Analytics</button>
-        <button type="button">ICT & Teaching</button>
+        <button type="button">Data Analytics</button>
+        <button type="button">Web Development</button>
+        <button type="button">Education</button>
       </div>
 
       <div class="projects-grid">
         <!-- Project 1 -->
         <article class="project-card">
           <div class="project-img">
-            <!-- Replace with real screenshot -->
-            <img src="project1.jpg" alt="ICT With Ahshaan Website" />
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="ICT With Ahshaan Website" />
           </div>
           <div class="project-body">
-            <div class="project-title">ICT With Ahshaan — Digital Learning Platform</div>
-            <div class="project-meta">ICT · Web · Education</div>
-            <p>
-              A learning platform for GCE O/L ICT students (Tamil medium) providing unit-wise notes,
-              tutorials, MCQs and class information.
+            <div class="project-title">ICT With Ahshaan — Educational Platform</div>
+            <div class="project-meta">Web Development · Education · ICT</div>
+            <p class="project-description">
+              A comprehensive digital learning platform for GCE O/L ICT students (Tamil medium) 
+              providing unit-wise notes, interactive tutorials, MCQ banks, and class information.
             </p>
             <div class="project-links">
               <a href="https://ictwithahshaan.github.io" target="_blank">
-                <i class="fa-solid fa-globe"></i> View Site
+                <i class="fa-solid fa-globe"></i> Live Demo
+              </a>
+              <a href="https://github.com/Mohamedahshaan/ictwithahshaan.github.io" target="_blank">
+                <i class="fa-brands fa-github"></i> Source Code
               </a>
             </div>
           </div>
@@ -1002,19 +1133,21 @@
         <!-- Project 2 -->
         <article class="project-card">
           <div class="project-img">
-            <!-- Replace with real screenshot -->
-            <img src="project2.jpg" alt="One Net Café Inventory System" />
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Dementia Risk Classification" />
           </div>
           <div class="project-body">
-            <div class="project-title">One Net Café — Python Inventory System</div>
-            <div class="project-meta">Python · CLI · Inventory</div>
-            <p>
-              A command-line inventory management system for a café, with item, dealer and order
-              handling using file-based storage.
+            <div class="project-title">Dementia Risk Classification Model</div>
+            <div class="project-meta">Machine Learning · Healthcare · Python</div>
+            <p class="project-description">
+              Developed and compared multiple ML models (Random Forest, XGBoost, Gradient Boosting) 
+              to classify dementia risk using non-medical factors, achieving 85% accuracy.
             </p>
             <div class="project-links">
+              <a href="https://github.com/Mohamedahshaan/dementia-risk-classification" target="_blank">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
               <a href="#">
-                <i class="fa-brands fa-github"></i> GitHub (coming soon)
+                <i class="fa-solid fa-file-lines"></i> Report
               </a>
             </div>
           </div>
@@ -1023,19 +1156,41 @@
         <!-- Project 3 -->
         <article class="project-card">
           <div class="project-img">
-            <!-- Replace with real screenshot -->
-            <img src="project3.jpg" alt="Dementia Risk Classification" />
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Café Inventory System" />
           </div>
           <div class="project-body">
-            <div class="project-title">Dementia Risk Classification</div>
-            <div class="project-meta">ML · Health · Classification</div>
-            <p>
-              Built and compared multiple ML models (Random Forest, XGBoost, Gradient Boosting,
-              Logistic Regression) to classify dementia risk using non-medical factors.
+            <div class="project-title">One Net Café — Inventory Management System</div>
+            <div class="project-meta">Python · CLI Application · Inventory</div>
+            <p class="project-description">
+              A command-line inventory management system for a café with item tracking, 
+              dealer management, and order processing using efficient file-based storage.
             </p>
             <div class="project-links">
+              <a href="https://github.com/Mohamedahshaan/cafe-inventory" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Student Performance Analysis" />
+          </div>
+          <div class="project-body">
+            <div class="project-title">Student Performance Data Analysis</div>
+            <div class="project-meta">Data Analytics · Python · Education</div>
+            <p class="project-description">
+              Comprehensive analysis of student performance data using Python, Pandas and visualization 
+              libraries to identify key factors affecting academic success and provide insights.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/Mohamedahshaan/student-performance-analysis" target="_blank">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
               <a href="#">
-                <i class="fa-solid fa-file-lines"></i> Notebook (coming soon)
+                <i class="fa-solid fa-chart-line"></i> Dashboard
               </a>
             </div>
           </div>
@@ -1048,7 +1203,7 @@
       <div class="section-heading">
         <div>
           <div class="section-title">Contact</div>
-          <div class="section-subtitle">Let’s connect</div>
+          <div class="section-subtitle">Let's connect and discuss opportunities</div>
         </div>
       </div>
 
@@ -1069,7 +1224,7 @@
                 <i class="fa-solid fa-phone"></i>
               </div>
               <div class="contact-text">
-                <small>Phone</small>
+                <small>Phone / WhatsApp</small>
                 <span>+94 74 266 3484</span>
               </div>
             </div>
@@ -1082,25 +1237,33 @@
                 <span><a href="https://ictwithahshaan.github.io" target="_blank">ictwithahshaan.github.io</a></span>
               </div>
             </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-text">
+                <small>Location</small>
+                <span>Colombo, Sri Lanka</span>
+              </div>
+            </div>
           </div>
 
           <div class="contact-note">
-            I’m especially interested in roles and projects related to AI, Machine Learning,
-            Data Analytics, and education technology. Feel free to reach out if you think we can
-            work together.
+            I'm actively seeking opportunities in AI, Machine Learning, Data Analytics, and educational technology. 
+            Whether you have a project idea, internship opportunity, or just want to connect and discuss technology, 
+            I'd love to hear from you. Feel free to reach out via any of the channels above.
           </div>
         </div>
 
         <div>
           <div class="qr-box">
-            <!-- Simple QR to your website (online API) -->
             <img
               src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ictwithahshaan.github.io"
               alt="QR code to ictwithahshaan.github.io" />
             <p>
-              Scan to visit
+              Scan to visit my educational platform
               <span>ictwithahshaan.github.io</span>
-              and view more about my ICT classes and learning content.
+              and explore my ICT teaching resources and learning materials.
             </p>
           </div>
         </div>
@@ -1133,6 +1296,25 @@
   }
 
   window.addEventListener("scroll", onScroll);
+  
+  // Portfolio filtering functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.portfolio-filter button');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // In a real implementation, you would filter projects here
+        // For now, we'll just log the filter
+        console.log(`Filtering by: ${this.textContent}`);
+      });
+    });
+  });
 </script>
 
 </body>
